@@ -1,9 +1,22 @@
+import os
+import shutil
 import sqlite3
 from pathlib import Path
 
 # Resolve database path relative to project root
 BASE_DIR = Path(__file__).resolve().parent.parent
 DB_PATH = BASE_DIR / "fest.db"
+
+# When deployed on Vercel, the root filesystem is read-only.
+# Copy database to /tmp so writes (like registrations) succeed without error.
+if os.environ.get("VERCEL"):
+    tmp_db = Path("/tmp") / "fest.db"
+    if not tmp_db.exists() and DB_PATH.exists():
+        try:
+            shutil.copy2(DB_PATH, tmp_db)
+        except Exception as e:
+            print(f"Error copying DB to /tmp: {e}")
+    DB_PATH = tmp_db
 
 def get_db_connection() -> sqlite3.Connection:
     """Returns a SQLite connection with row_factory set to sqlite3.Row and foreign keys enabled."""
