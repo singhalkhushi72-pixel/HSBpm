@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Zenith26" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/bg_slate_900</item>
+        <item name="android:navigationBarColor">@color/bg_slate_900</item>
+        <item name="android:windowBackground">@color/bg_slate_900</item>
+        <item name="android:textColorPrimary">@color/text_slate_100</item>
+    </style>
+</resources>

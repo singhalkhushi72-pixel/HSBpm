@@ -1,0 +1,26 @@
+# Python virtual environment & cache
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Android & Gradle build artifacts
+.gradle/
+build/
+*/build/
+app/build/
+*.apk
+*.aab
+*.dex
+*.class
+local.properties
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db

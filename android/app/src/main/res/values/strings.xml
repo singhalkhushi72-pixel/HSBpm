@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zenith \'26</string>
+    <string name="tagline">The Annual Inter-College Technical &amp; Cultural Mega Fest</string>
+    <string name="hero_headline">Ignite the Horizon</string>
+    <string name="hero_dates">Nov 14–15, 2026</string>
+    <string name="hero_venue">Campus Main Grounds</string>
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="student_portal">Student Portal</string>
+</resources>
